@@ -109,30 +109,110 @@ input[type="search"] {
     flex-grow: 1;
   }
 
-  /* 모바일 메뉴 제어 버튼 시작 */
-  .buttonWrapper {
-    background-color: gold;
+  /* 모바일 메인메뉴 제어버튼 */
+  /* .buttonWrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 3.75rem;
+    right: var(--spacing-lg);
+    padding: 0.25rem;
   }
-
-  /* 모바일 메뉴 제어 버튼 종료 */
   .button--burger {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
   }
 
-  [class*=".button--burgerBar"] {
-    background-color: var(--white);
-    display: block;
-  }
-  .button--bugerBarTop {
-    
+  .button--burger:focus {
+    outline-offset: 2px;
   }
 
-  .button--bugerBarTop {
+  .button--burgerBarTop,
+  .button--burgerBarMiddle,
+  .button--burgerBarBottom {
+    width: 100%;
+    height: 20%;
+    background: var(--white);
+    border-radius: 20px;
+    transition: all 350ms;
   }
 
-  .button--bugerBarTop {
+  .is--active .button--burgerBarTop {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .is--active .button--burgerBarMiddle {
+    transform: translateX(-150%);
+  }
+
+  .is--active .button--burgerBarBottom {
+    position: relative;
+    top: -50%;
+    transform: translateY(50%) rotate(-45deg);
+  } */
+
+  .buttonWrapper {
+    padding: var(--spacing-xxs);
+    overflow: hidden;
+    position: absolute;
+    top: 3.75rem;
+    right: var(--spacing-lg);
+    transform: translate(-0.25rem, -0.25rem);
+  }
+
+  .button--burger {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .button--burger:focus {
+    outline-offset: 2px;
+  }
+
+  .button--burgerBarTop,
+  .button--burgerBarMiddle,
+  .button--burgerBarBottom {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: var(--white);
+    border-radius: 0.25rem;
+    left: 0;
+    transition: all 200ms;
+  }
+
+  .button--burgerBarTop {
+    top: 0;
+  }
+
+  .button--burgerBarMiddle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .button--burgerBarBottom {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+
+  .button--burger.is--active .button--burgerBarTop {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+  .button--burger.is--active .button--burgerBarMiddle {
+    transform: translate(-150%, -50%);
+  }
+
+
+  .button--burger.is--active .button--burgerBarBottom {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
   }
 }
 
