@@ -204,7 +204,7 @@ input[type="search"] {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
   }
-  
+
   .button--burger.is--active .button--burgerBarMiddle {
     transform: translate(-150%, -50%);
   }
@@ -223,7 +223,6 @@ input[type="search"] {
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
-    background-color: gold;
   }
 
   /* 데스크탑 로고 */
@@ -246,6 +245,38 @@ input[type="search"] {
   .button--burger {
     display: none;
   }
+
+  /* 데스크탑 메인 메뉴 */
+  .menu {
+    background: var(--secondary-color);
+    padding: var(--spacing-base) var(--spacing-lg);
+  }
+
+  .menu__list {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu__link {
+    color: var(--white);
+    text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
+    display: block;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  /* .menu__item { */
+    /* color: #fff; */
+    /* font-weight: 700; */
+    /* text-shadow: 1px 1px var(--primary-color), -1px -1px var(--primary-color); */
+    /* background-color: green; */
+  /* } */
 }
 
 /* 고해상도 배경이미지 미디어쿼리 */
