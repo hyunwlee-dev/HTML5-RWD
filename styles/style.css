@@ -108,6 +108,32 @@ input[type="search"] {
   .searchForm__group .formInput {
     flex-grow: 1;
   }
+
+  /* 모바일 메뉴 제어 버튼 시작 */
+  .buttonWrapper {
+    background-color: gold;
+  }
+
+  /* 모바일 메뉴 제어 버튼 종료 */
+  .button--burger {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+  }
+
+  [class*=".button--burgerBar"] {
+    background-color: var(--white);
+    display: block;
+  }
+  .button--bugerBarTop {
+    
+  }
+
+  .button--bugerBarTop {
+  }
+
+  .button--bugerBarTop {
+  }
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
@@ -134,6 +160,11 @@ input[type="search"] {
 
   .searchForm__group .formInput {
     width: 25rem;
+  }
+
+  /* 데스크탑 메인메뉴 제어버튼 */
+  .button--burger {
+    display: none;
   }
 }
 
