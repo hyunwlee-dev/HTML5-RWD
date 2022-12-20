@@ -404,6 +404,22 @@ input[type="search"] {
       "favorite"
       "twitter";
   }
+
+  /* 모바일 인기 사이트 */
+  .favorite {
+    /* background-color: yellow; */
+  }
+
+  .favorite__item {
+    margin-top: var(--spacing-sm);
+  }
+
+  .favorite__link::after {
+    content: attr(data-tooltip);
+    color: var(--accent-favorite);
+    font-size: var(--text-sm);
+    margin-left: var(--spacing-xs);
+  }
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
@@ -461,7 +477,6 @@ input[type="search"] {
 
   /* 데스크탑 메인 콘텐츠 */
   .appMain {
-    border: 5px solid red;
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
@@ -481,4 +496,5 @@ input[type="search"] {
   .logo__link {
     background-image: url(./../images/webcafe-logo@2x.png);
   }
+}
 }
