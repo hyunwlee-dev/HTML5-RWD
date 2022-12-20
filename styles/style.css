@@ -260,13 +260,11 @@ input[type="search"] {
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 6.25em);
-  background-color: pink;
 }
 
 .board__date {
   flex: 0 0 auto;
   width: 6.25rem;
-  background-color: skyblue;
   text-align: right;
 }
 
