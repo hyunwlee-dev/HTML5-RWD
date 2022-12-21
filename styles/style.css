@@ -330,7 +330,25 @@ input[type="search"] {
   margin-top: var(--spacing-sm);
 }
 
+/* 공통 푸터 */
+.appFooter {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-base);
+}
 
+/* 공통 주소 */
+/* .address { */
+  /* margin: var(--spacing-base) 0; */
+/* } */
+
+/* 공통 저작권 */
+/* .copyright { */
+  /* margin: var(--spacing-base) 0; */
+/* } */
 
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
@@ -466,6 +484,57 @@ input[type="search"] {
     font-size: var(--text-sm);
     margin-left: var(--spacing-xs);
   }
+
+  /* 모바일 푸터 */
+  .appFooter {
+    font-size: var(--text-sm);
+  }
+
+  /* 모바일 주소 */
+  .address {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+/* 태블릿 디바이스 (Tablet Device) */
+@media  (min-width: 640px) and (max-width: 769px) {
+  /* 태블릿 메인 콘텐츠 */
+  .appMain {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  /* 태블릿 추천 서적 */
+  .book {
+    grid-column: 2 / -1;
+    grid-row: 3 / -1;
+  }
+
+  /* 태블릿 소식 */
+  .news {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  /* 태블릿 게시판 */
+  .board {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  /* 태블릿 인기사이트 */
+  .favorite {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+  }
+
+  /* 태블릿 트위터 */
+  .twitter {
+    grid-column: 1 / 2;
+    grid-row: 3 / -1;
+  }
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
@@ -530,6 +599,13 @@ input[type="search"] {
     grid-template-areas: "news news news news news news news news news news news news"
                          "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
                          "book book book book . board board board board board board board";
+  }
+
+  /* 데스크탑 푸터 */
+  .appFooter {
+    /* justify-content: center; */
+    align-items: center;
+  }
 }
 
 /* 고해상도 배경이미지 미디어쿼리 */
@@ -542,5 +618,4 @@ input[type="search"] {
   .logo__link {
     background-image: url(./../images/webcafe-logo@2x.png);
   }
-}
 }
