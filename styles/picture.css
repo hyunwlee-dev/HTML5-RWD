@@ -1,0 +1,11 @@
+.svg1 path {
+  transition: all 400ms;
+}
+.svg1 path:hover {
+  fill: blue;
+  /* fill: linear-gradient(to bottom, #ccc 0%, #212121 100%); */
+}
+
+.svg2 {
+
+}
